@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
+var port = 3000;
 
 var app = express();
 
@@ -46,8 +47,8 @@ app.get("*",(req,res)=>{
   res.sendfile('./public/index.html');
 });
 
-app.listen(80);
-console.log('Server Started at port:'+ 80);
+app.listen(port);
+console.log('Server Started at port:'+ port);
 
 
 module.exports = app;
